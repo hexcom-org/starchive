@@ -9,7 +9,7 @@ it('should properly find buildings by SLOT and TIER', function () {
         starchive.findBuildings({
             slot: Slot.SPECIALIZATION,
             tier: 2
-        }).map(building => building.Name)
+        }).map(building => building.name)
     ).toStrictEqual([ "Alpha" ])
 });
 
