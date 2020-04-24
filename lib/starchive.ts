@@ -1,5 +1,4 @@
-import {DefinitionsSource, RawBuildingType} from "./definitions";
-import {slotFromRawValue} from "./slot";
+import {DefinitionsSource, RawBuildingType, slotFromRawValue} from "./definitions";
 import {BuildingMatcher} from "./matchers";
 
 function buildChecks(matcher: BuildingMatcher): Array<(def: RawBuildingType) => boolean> {

@@ -3,9 +3,3 @@ export enum Slot {
     SPECIALIZATION = "SPECIALIZATION"
 }
 
-export function slotFromRawValue(slotAffinityValue: string): Slot | undefined {
-    switch (slotAffinityValue) {
-        case "Specialization":
-            return Slot.SPECIALIZATION
-    }
-}

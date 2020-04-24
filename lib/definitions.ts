@@ -1,3 +1,5 @@
+import {Slot} from "./slot";
+
 export interface RawBuildingType {
     Id: number
     Name: String
@@ -11,4 +13,11 @@ export interface RawBuildingDefinitions {
 
 export interface DefinitionsSource {
     getBuildingTypeDefinitions(): Array<RawBuildingType>
+}
+
+export function slotFromRawValue(slotAffinityValue: string): Slot | undefined {
+    switch (slotAffinityValue) {
+        case "Specialization":
+            return Slot.SPECIALIZATION
+    }
 }
