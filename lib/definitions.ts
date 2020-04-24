@@ -1,4 +1,4 @@
-import {Slot} from "./slot";
+import {Slot} from "./building";
 
 export interface RawBuildingType {
     Id: number

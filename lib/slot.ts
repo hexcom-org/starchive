@@ -1,5 +1,0 @@
-export enum Slot {
-    PRODUCTION = "PRODUCTION",
-    SPECIALIZATION = "SPECIALIZATION"
-}
-

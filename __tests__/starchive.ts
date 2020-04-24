@@ -1,6 +1,6 @@
 import Starchive from "../lib/starchive";
-import {Slot} from "../lib/slot";
 import {DefinitionsSource, RawBuildingType} from "../lib/definitions";
+import {Slot} from "../lib/building";
 
 it('should properly find buildings by SLOT and TIER', function () {
     const starchive = new Starchive(mockDefinitionsSource);
