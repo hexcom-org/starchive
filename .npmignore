@@ -1,5 +1,6 @@
 lib
 __tests__
+tools
 tsconfig.json
 jest.config.js
 .idea
