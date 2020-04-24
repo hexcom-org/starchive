@@ -71,9 +71,12 @@ export function serializeSlot(slotAffinityValue?: string): Slot | undefined {
     switch (slotAffinityValue) {
         case "Specialization":
             return Slot.SPECIALIZATION
-        default:
-            return undefined;
     }
+
+    if (/\w*Production/.test(slotAffinityValue ?? ""))
+        return Slot.PRODUCTION
+
+    return undefined;
 }
 
 function serializePath(role?: string): Path | undefined {
