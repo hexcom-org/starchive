@@ -1,6 +1,5 @@
-import Starchive from "../lib/starchive";
-import {DefinitionsSource, RawBuildingType} from "../lib/definitions";
-import {Slot} from "../lib/building";
+import {DefinitionsSource, RawBuildingType} from "../lib/definitions/definitions";
+import {Slot, Starchive} from "..";
 
 describe('findBuildings', function () {
     let starchive: Starchive;

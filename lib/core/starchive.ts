@@ -1,6 +1,6 @@
-import {DefinitionsSource, RawBuildingType} from "./definitions";
+import {DefinitionsSource, RawBuildingType} from "../definitions/definitions";
 import {BuildingMatcher} from "./matchers";
-import {Building} from "./building";
+import {Building} from "..";
 import {serializeBuilding, serializeSlot, serializeTier} from "./serialization";
 
 function buildChecks(matcher: BuildingMatcher): Array<(def: RawBuildingType) => boolean> {

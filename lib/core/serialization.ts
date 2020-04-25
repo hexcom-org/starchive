@@ -1,5 +1,5 @@
-import {RawBuildingType, Stat, TargetAttribute} from "./definitions";
-import {Building, Path, Slot, Tier} from "./building";
+import {RawBuildingType, Stat, TargetAttribute} from "../definitions/definitions";
+import {Building, Path, Slot, Tier} from "..";
 
 export function serializeBuilding(def: RawBuildingType): Building {
     return {

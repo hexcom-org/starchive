@@ -1,4 +1,4 @@
-import {Slot} from "./building";
+import {Slot} from "..";
 
 export interface BuildingMatcher {
     slot?: Slot
