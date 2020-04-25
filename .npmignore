@@ -1,6 +1,7 @@
 lib
 __tests__
 tools
+examples
 tsconfig.json
 jest.config.js
 .idea

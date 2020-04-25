@@ -1,0 +1,14 @@
+{
+  "name": "overall-production-buildings-cost",
+  "version": "1.0.0",
+  "description": "Example usage of '@hexcom/starchive' library. Prints sum of resources needed to create upgrade all production buildings to level 10.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "polydome",
+  "license": "ISC",
+  "dependencies": {
+    "@hexcom/starchive": "^0.1.0"
+  }
+}
