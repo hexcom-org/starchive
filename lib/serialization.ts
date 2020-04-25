@@ -15,43 +15,55 @@ export function serializeBuilding(def: RawBuildingType): Building {
 }
 
 interface Stats {
-    hp?: Array<number>,
-    influence?: Array<number>,
+    hp: Array<number>,
+    influence: Array<number>,
     cost: {
-        time?: Array<number>,
-        metal?: Array<number>,
-        gas?: Array<number>,
-        crystal?: Array<number>
+        time: Array<number>,
+        metal: Array<number>,
+        gas: Array<number>,
+        crystal: Array<number>
     }
 }
 
-function serializeStats(stats?: Array<Stat>) {
-    const result: Stats = { cost: {} }
+function serializeStats(stats?: Array<Stat>): Stats {
+    const result: Partial<Stats> = {}
+
+    const cost: Stats["cost"] = {
+        time: [],
+        metal: [],
+        gas: [],
+        crystal: []
+    }
 
     stats?.forEach(stat => {
         switch (stat.TargetAttribute) {
             case TargetAttribute.COST_CRS:
-                result.cost.crystal = stat.ModifierArray;
+                cost.crystal = stat.ModifierArray;
                 break;
             case TargetAttribute.COST_GAS:
-                result.cost.gas = stat.ModifierArray;
+                cost.gas = stat.ModifierArray;
                 break;
             case TargetAttribute.COST_MTL:
-                result.cost.metal = stat.ModifierArray;
+                cost.metal = stat.ModifierArray;
                 break;
             case TargetAttribute.COST_TIME:
-                result.cost.time = stat.ModifierArray;
+                cost.time = stat.ModifierArray;
                 break;
             case TargetAttribute.STAT_B_HP:
                 result.hp = stat.ModifierArray;
                 break;
             case TargetAttribute.STAT_PROD_SPG:
-                result.cost.metal = stat.ModifierArray;
+                result.influence = stat.ModifierArray;
                 break;
         }
     });
 
-    return result;
+    // TODO: Fill arrays to Level Cap
+    return {
+        hp: result.hp || [],
+        influence: result.influence || [],
+        cost: cost
+    };
 }
 
 export function serializeTier(tierAffinity?: Array<number>): Tier | undefined {

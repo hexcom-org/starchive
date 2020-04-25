@@ -19,12 +19,12 @@ export interface Building {
     slot?: Slot,
     tier?: Tier,
     cost: {
-        time?: Array<number>,
-        metal?: Array<number>,
-        gas?: Array<number>,
-        crystal?: Array<number>
+        time: Array<number>,
+        metal: Array<number>,
+        gas: Array<number>,
+        crystal: Array<number>
     }
-    influence?: Array<number>,
-    hp?: Array<number>
+    influence: Array<number>,
+    hp: Array<number>
     path?: Path,
 }
